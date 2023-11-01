@@ -37,7 +37,8 @@ function App() {
         fullName: "",
         phone: "",
         email: "",
-        address : ""
+        address : "",
+        summary : ""
     });
 
     const handlePersonalDetailsChange = (newDetails)=>{

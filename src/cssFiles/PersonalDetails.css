@@ -14,25 +14,26 @@
     position: relative;
 }
 
-.input-div input{
+.input-div input, .input-div textarea{
     box-sizing: border-box;
     width: 100%;
     padding: .8rem;
     border-radius: .5rem;
     border: none;
     background-color: rgba(227, 226, 251, 0.724);
+    font-size: 1rem;
 }
 
 .input-div label{
     position: absolute;
     top: 0;
     left: 0;
-    transform: translate(1.5rem,80%);
+    transform: translate(1rem,80%);
     color: grey;
     transition: transform .2s ease-in-out, color .2s ease-in-out;
 }
 
-.input-div input:focus{
+.input-div input:focus, .input-div textarea:focus{
     outline: none;
 }
 

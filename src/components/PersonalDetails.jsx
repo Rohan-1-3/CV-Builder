@@ -61,6 +61,12 @@ function PersonalDetails({details, onUpdate}) {
                 value={personalDetail.address}
                 onChange={(e) => handleInputChange('address', e.target.value)}
             />
+
+            <div className="input-div summary">
+              <textarea className="summary" placeholder="Write Something About Yourself..."
+                onChange={e=> handleInputChange('summary', e.target.value)}>
+              </textarea>
+            </div>
         </div>
     );
 }

@@ -2,13 +2,31 @@
     --size: 500px;
   }
 
-  .cv-preview {
-    width: 70%;
-    background-color: white;
-    aspect-ratio: 1 / 1.41; /* A4 aspect ratio (width / height) */
-    min-width: calc(.9 * var(--size)); /* Set minimum width based on aspect ratio */
-    max-width: calc(1.2 * var(--size));
-    box-sizing: border-box;
-    margin: auto;
-    margin-bottom: 1rem;
-  }
+.cv-preview {
+  width: 70%;
+  background-color: white;
+  aspect-ratio: 1 / 1.41; /* A4 aspect ratio (width / height) */
+  min-width: calc(1 * var(--size)); /* Set minimum width based on aspect ratio */
+  margin: 0 auto;
+  margin-bottom: 1rem;
+  text-align: center
+}
+
+.cv-preview-personal{
+  padding: 1rem;
+  border-bottom: 1px dotted black;
+  width: 80%;
+  margin: auto;
+}
+
+.cv-preview h1{
+  font-size: 2rem;
+  font-weight: bold;
+  margin: 1rem 0;
+}
+
+.cv-preview p{
+  font-size: 1.1rem;
+  margin: .3rem;
+  font-weight: 550;
+}

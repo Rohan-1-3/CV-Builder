@@ -1,0 +1,15 @@
+.main-container{
+    width: 90%;
+    margin: auto auto;
+    max-width: 1200px;
+}
+
+.header{
+    width: 100%;
+}
+
+.title{
+    font-size: 2rem;
+    max-width: fit-content;
+    margin: auto auto;
+}

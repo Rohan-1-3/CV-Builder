@@ -1,0 +1,9 @@
+
+
+.feature-card{
+    display: flex;
+}
+
+.feature-card img{
+    height: 1rem;
+}

@@ -2,6 +2,7 @@
 // import React from 'react';
 
 import { useEffect, useState } from "react";
+import "../cssFiles/PersonalDetails.css"
 
 const InputField = ({ id, label, value, onChange }) => {
   return (
@@ -11,6 +12,8 @@ const InputField = ({ id, label, value, onChange }) => {
         id={id}
         value={value}
         onChange={onChange}
+        autoComplete="off"
+        placeholder=" "
       />
       <label htmlFor={id}>{label}</label>
     </div>
@@ -30,6 +33,7 @@ function PersonalDetails({details, onUpdate}) {
 
     return (
         <div className='personal-details'>
+            <h2>Personal Details</h2>
             <InputField
             id="full-name"
             label="Full Name"

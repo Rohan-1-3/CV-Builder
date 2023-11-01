@@ -49,11 +49,12 @@ function App() {
             <header className='header'>
                 <p className='title'>CV Builder</p>
             </header>
-            <div className='main-container'>
-                <ExtraFeatures features = {extraFeatures}/>
-                <PersonalDetails details={personalDetails} onUpdate={handlePersonalDetailsChange}/>
-
-            </div>
+            <main className='main-container'>
+                <div className='container'>
+                    <ExtraFeatures features = {extraFeatures}/>
+                    <PersonalDetails details={personalDetails} onUpdate={handlePersonalDetailsChange}/>
+                </div>
+            </main>
         </React.Fragment>
     )
 

@@ -5,7 +5,8 @@ import darkTheme from "../assets/dark-theme.svg"
 import trash from "../assets/trash.svg"
 import file from "../assets/file.svg"
 import download from "../assets/download.svg"
-import React from 'react'
+import React, { useState } from 'react'
+import PersonalDetails from './PersonalDetails'
 
 const extraFeatures = [
     {
@@ -31,6 +32,17 @@ const extraFeatures = [
 ]
 
 function App() {
+    const [personalDetails, setPersonalDetails] = useState({
+        fullName: "",
+        phone: "",
+        email: "",
+        address : ""
+    });
+
+    const handlePersonalDetailsChange = (newDetails)=>{
+        setPersonalDetails(newDetails)
+    }
+
 
     return(
         <React.Fragment>
@@ -38,7 +50,9 @@ function App() {
                 <p className='title'>CV Builder</p>
             </header>
             <div className='main-container'>
-                <ExtraFeatures features = {extraFeatures} />
+                <ExtraFeatures features = {extraFeatures}/>
+                <PersonalDetails details={personalDetails} onUpdate={handlePersonalDetailsChange}/>
+
             </div>
         </React.Fragment>
     )

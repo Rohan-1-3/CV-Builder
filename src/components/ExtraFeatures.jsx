@@ -12,7 +12,6 @@ function FeatureCard ({detail}){
 }
 
 function ExtraFeatures({features}) {
-    console.log(features)
 
     return (
         <div className='extra-features'>

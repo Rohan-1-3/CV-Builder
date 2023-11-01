@@ -2,6 +2,7 @@
     width: 90%;
     margin: auto auto;
     max-width: 1200px;
+    min-width: 600px;
     display: flex;
 }
 

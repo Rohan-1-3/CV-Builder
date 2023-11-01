@@ -51,3 +51,9 @@ html{
 	height: 100vh;
 	overflow-x: hidden;
 }
+
+#root{
+	display: flex;
+	flex-direction: column;
+	gap: 2rem;
+}

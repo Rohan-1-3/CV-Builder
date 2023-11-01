@@ -1,9 +1,23 @@
-
+.extra-features{
+    width: 100%;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1rem;
+    border-radius: .5rem;
+}
 
 .feature-card{
     display: flex;
+    background-color: rgba(227, 226, 251, 0.724);
+    padding: 1rem;
+    justify-content: center;
+    gap: 1rem;
+    align-items: center;
+    border-radius: .5rem;
 }
 
 .feature-card img{
-    height: 1rem;
+    height: 1.2rem;
 }

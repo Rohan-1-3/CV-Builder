@@ -2,10 +2,12 @@
     width: 90%;
     margin: auto auto;
     max-width: 1200px;
+    display: flex;
 }
 
 .header{
     width: 100%;
+    padding: 1rem 0;
 }
 
 .title{

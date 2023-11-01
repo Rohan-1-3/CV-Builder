@@ -53,10 +53,17 @@ body{
 	width: 100vw;
 	height: 100vh;
 	overflow-x: hidden;
+	padding: 1rem;
 }
 
 #root{
 	display: flex;
 	flex-direction: column;
 	gap: 2rem;
+}
+
+@media (max-width: 900px){
+    html{
+        font-size: .75rem;
+    }
 }

@@ -5,6 +5,7 @@
     max-width: 1200px;
     min-width: 600px;
     display: flex;
+    gap: 1rem;
 }
 
 .header{
@@ -21,9 +22,16 @@
 .container{
     box-sizing: border-box;
     position: relative;
-    width: 100%;
+    width: 70%;
     display: flex;
     flex-direction: column;
     gap: 1rem;
-    margin: auto auto;
+    margin: 0 auto;
+}
+
+@media (max-width: 750px){
+    .main-container{
+        display: flex;
+        flex-direction: column;
+    }
 }

@@ -7,6 +7,7 @@ import file from "../assets/file.svg"
 import download from "../assets/download.svg"
 import React, { useState } from 'react'
 import PersonalDetails from './PersonalDetails'
+import Preview from './Preview'
 
 const extraFeatures = [
     {
@@ -54,6 +55,7 @@ function App() {
                     <ExtraFeatures features = {extraFeatures}/>
                     <PersonalDetails details={personalDetails} onUpdate={handlePersonalDetailsChange}/>
                 </div>
+                <Preview details={personalDetails}/>
             </main>
         </React.Fragment>
     )

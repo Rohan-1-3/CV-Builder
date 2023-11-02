@@ -22,33 +22,31 @@ const InputField = ({ id, label, value, onChange }) => {
 
 export function SkillContainer({handleChange ,skill, skills}){
     const [skillEditName, setSkillEditName] = useState(skill.skillName);
-    const [updatedSkills, setUpdatedSkills] = useState(null)
+    const [updatedSkills, setUpdatedSkills] = useState(skills);
 
     useEffect(() => {
         if (updatedSkills !== null) {
           handleChange(updatedSkills);
+          console.log(updatedSkills)
         }
-      }, [handleChange, updatedSkills]);
+      }, [updatedSkills]);
 
 
     const handleDelete = ()=>{
         setUpdatedSkills(skills.filter(ski => ski.id !== skill.id))
-
     }
 
-    const handleUpdate = (fieldToUpdate, condition) => {
+    const handleHide = ()=>{
         setUpdatedSkills(skills.map(ski => {
-            return (condition(ski)) ? { ...ski, [fieldToUpdate]: !ski[fieldToUpdate] } : { ...ski };
-          }))
-      };
+            return (ski.id === skill.id) ? { ...ski, visibility: !ski.visibility } : { ...ski };
+        }))
+    }
 
-      const handleHide = () => {
-        handleUpdate('visibility', (ski) => ski.id === skill.id);
-      };
-
-      const handleEdit = () => {
-        handleUpdate('active', (ski) => ski.id === skill.id);
-      };
+    const handleEdit = ()=>{
+        setUpdatedSkills(skills.map(ski => {
+            return (ski.id === skill.id) ? { ...ski, active : !ski.active } : { ...ski };
+        }))
+    }
 
     const handleEditConfirm = ()=>{
         setUpdatedSkills(skills.map(ski => {

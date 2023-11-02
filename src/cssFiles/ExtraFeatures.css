@@ -23,3 +23,7 @@
 .feature-card img{
     height: 1.2rem;
 }
+
+.feature-card:hover{
+    opacity: .6;
+}

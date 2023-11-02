@@ -28,23 +28,84 @@
 
 .dropdown-skill-container{
     flex-direction: column;
-    gap: .5rem;
+    gap: 1.4rem;
     padding: .5rem;
     display: none;
 }
 
 .skill{
     display: flex;
-    justify-content: space-between;
+    /* justify-content: space-between; */
     padding: 1rem ;
     background-color: rgb(235, 234, 252);
     border-radius: 1rem;
+}
+
+.skill p{
+    flex: 1;
+    cursor: pointer;
+}
+
+svg{
+    cursor: pointer;
+}
+
+button{
+    cursor: pointer;
+}
+
+button:hover{
+    opacity: .5;
 }
 
 .skill-icons{
     width: 20%;
     display: flex;
     justify-content: space-between;
+}
+
+.skill.button{
+    background-color: white;
+    justify-content: center;
+    padding: .7rem;
+}
+
+.skill.button button{
+    background-color: rgb(235, 234, 252);
+    border: none;
+    padding: .5rem 2rem;
+    border-radius: .3rem;
+    font-weight: bold;
+}
+
+.skill-form,.edit-form{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.form-buttons{
+    display: flex;
+    justify-content: space-between;
+}
+
+.form-buttons button{
+    padding: .5rem 1rem;
+    border: none;
+    border-radius: .3rem;
+    font-weight: bold;
+}
+
+.confirm-button{
+    background-color: rgb(96, 214, 96);
+}
+
+.cancel-button{
+    background-color: rgb(255, 0, 0);
+}
+
+.cancel-button, .confirm-button{
+    color: white;
 }
 
 .visible {

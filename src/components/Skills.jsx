@@ -27,7 +27,6 @@ export function SkillContainer({handleChange ,skill, skills}){
     useEffect(() => {
         if (updatedSkills !== null) {
           handleChange(updatedSkills);
-          console.log(updatedSkills)
         }
       }, [updatedSkills]);
 
@@ -65,11 +64,14 @@ export function SkillContainer({handleChange ,skill, skills}){
                         value={skillEditName}
                         onChange={e=>setSkillEditName(e.target.value)}
                         />
-                        <button onClick={handleEditConfirm}>Confirm</button>
-                        <button onClick={()=>{
-                            handleEdit()
-                            setSkillEditName(skill.skillName)
-                        }}>Back</button>
+                        <div className="form-buttons">
+                            <button className="confirm-button" onClick={handleEditConfirm}>Confirm</button>
+                            <button className="cancel-button" onClick={()=>{
+                                handleEdit()
+                                setSkillEditName(skill.skillName)
+                            }}>Back</button>
+                        </div>
+
                     </div>
                 )
 
@@ -119,17 +121,20 @@ function Skills({details, onUpdate}) {
             {
                 formActive ? (
                     <div className="skill-form">
+                        <h2>Skills</h2>
                         <InputField
                         id="skill-name"
                         label="Skill"
                         value={skillName}
                         onChange={(e) => setSkillName(e.target.value)}
                         />
-                        <button onClick={handleConfirm}>Confirm</button>
-                        <button onClick={()=>{
-                            setFormActive(false)
-                            setSkillName("")
-                        }}>Cancel</button>
+                        <div className="form-buttons">
+                            <button onClick={handleConfirm} className="confirm-button">Confirm</button>
+                            <button className="cancel-button" onClick={()=>{
+                                setFormActive(false)
+                                setSkillName("")
+                            }}>Cancel</button>
+                        </div>
                     </div>
                 ) : (
                     <React.Fragment>
@@ -143,7 +148,7 @@ function Skills({details, onUpdate}) {
                                                             skill={skill}
                                                             skills = {skills}
                                                             />)}
-                            <div className="skill">
+                            <div className="skill button">
                                 <button onClick={()=>setFormActive(true)}>Add Skill</button>
                             </div>
                         </div>

@@ -54,11 +54,15 @@
 }
 
 .skills-list ul{
-  height: 50px;
+  height: 4rem;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
   margin: .5rem 3rem;
+}
+
+.skills-list li{
+  font-size: 1.2rem;
 }
 
 .hidden{

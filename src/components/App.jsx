@@ -41,21 +41,7 @@ function App() {
         address : "",
         summary : ""
     });
-    const [skills, setSkills] = useState([{
-        id: uuid(),
-        skillName:"Critical Thinking",
-        active: false
-    },
-    {
-        id: uuid(),
-        skillName:"Dancer",
-        active: false
-    },
-    {
-        id: uuid(),
-        skillName:"Cook Helper",
-        active: false
-    },]);
+    const [skills, setSkills] = useState([]);
 
     const handlePersonalDetailsChange = (newDetails)=>{
         setPersonalDetails(newDetails);
@@ -76,7 +62,8 @@ function App() {
                     <PersonalDetails details={personalDetails} onUpdate={handlePersonalDetailsChange}/>
                     <Skills details={skills} onUpdate={handleSkillsChange}/>
                 </div>
-                <Preview details={personalDetails}/>
+                <Preview details={personalDetails}
+                        skillsList={skills}/>
             </main>
         </React.Fragment>
     )

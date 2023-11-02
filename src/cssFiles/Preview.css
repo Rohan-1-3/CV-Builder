@@ -9,6 +9,7 @@
   min-width: calc(1 * var(--size)); /* Set minimum width based on aspect ratio */
   margin: 0 auto;
   margin-bottom: 1rem;
+  font-family: 'Times New Roman', Times, serif;
 }
 
 .cv-container{
@@ -49,4 +50,5 @@
 .professional-summary p{
   margin: .5rem 3rem;
   text-align: justify;
+  font-size: 1.2rem;
 }

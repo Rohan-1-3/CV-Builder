@@ -1,0 +1,81 @@
+.skills-container{
+    border-radius: 1rem;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: .2rem;
+    background-color: white;
+    padding: 1rem 2rem;
+}
+
+.skills-container h2{
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.skills-container svg{
+    height: .9rem;
+}
+
+.title-skill{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin: 0;
+    align-items: center;
+    transition: transform .2s ease-in-out;
+}
+
+.dropdown-skill-container{
+    flex-direction: column;
+    gap: .5rem;
+    padding: .5rem;
+    display: none;
+}
+
+.skill{
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem ;
+    background-color: rgb(235, 234, 252);
+    border-radius: 1rem;
+}
+
+.skill-icons{
+    width: 20%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.visible {
+    display: flex;
+    animation: expand .2s ease-in-out;
+    transform-origin: top;
+}
+
+.rotate{
+    animation: spin .2s ease-in-out forwards 1;
+}
+
+@keyframes spin{
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(180deg);
+    }
+}
+
+@keyframes expand {
+  0% {
+    transform: scaleY(0);
+  }
+
+  70% {
+    transform: scaleY(1.1);
+  }
+
+  100% {
+    transform: scaleY(1);
+  }
+}

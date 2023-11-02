@@ -3,6 +3,8 @@ import "../cssFiles/Preview.css"
 
 function Preview({ details }) {
     const { fullName, address, phone, email } = details;
+    const phoneNum = phone.trim();
+    const emailAdd = email.trim();
 
     return (
         <div className="cv-preview">
@@ -10,16 +12,16 @@ function Preview({ details }) {
                 <div className="cv-preview-personal">
                     <h1>{fullName}</h1>
                     <p>{address}</p>
-                    {phone !== "" || email !== "" ? (
-                        <p>{phone ? phone : ''}
-                        {phone !== '' && email !== '' ? ', ' : ''}
-                        {email ? email : ''}</p>
+                    {phoneNum !== "" || emailAdd !== "" ? (
+                        <p>{phoneNum ? phoneNum : ''}
+                        {phoneNum !== '' && emailAdd !== '' ? ', ' : ''}
+                        {emailAdd ? emailAdd : ''}</p>
                     ) : (
                         <p></p>
                     )}
                 </div>
                 <div className="professional-summary">
-                        <h3>Professional Summary</h3>
+                        {details.summary.trim() !== "" && <h3>Professional Summary</h3>}
                         <p>{details.summary}</p>
                 </div>
             </div>

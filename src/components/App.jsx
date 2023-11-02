@@ -8,6 +8,7 @@ import download from "../assets/download.svg"
 import React, { useState } from 'react'
 import PersonalDetails from './PersonalDetails'
 import Preview from './Preview'
+import Skills from './Skills'
 
 const extraFeatures = [
     {
@@ -40,11 +41,29 @@ function App() {
         address : "",
         summary : ""
     });
+    const [skills, setSkills] = useState([{
+        id: uuid(),
+        skillName:"Critical Thinking",
+        active: false
+    },
+    {
+        id: uuid(),
+        skillName:"Dancer",
+        active: false
+    },
+    {
+        id: uuid(),
+        skillName:"Cook Helper",
+        active: false
+    },]);
 
     const handlePersonalDetailsChange = (newDetails)=>{
-        setPersonalDetails(newDetails)
+        setPersonalDetails(newDetails);
     }
 
+    const handleSkillsChange = (newSkill)=>{
+        setSkills(newSkill);
+    }
 
     return(
         <React.Fragment>
@@ -55,6 +74,7 @@ function App() {
                 <div className='container'>
                     <ExtraFeatures features = {extraFeatures}/>
                     <PersonalDetails details={personalDetails} onUpdate={handlePersonalDetailsChange}/>
+                    <Skills details={skills} onUpdate={handleSkillsChange}/>
                 </div>
                 <Preview details={personalDetails}/>
             </main>

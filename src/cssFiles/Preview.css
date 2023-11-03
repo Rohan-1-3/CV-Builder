@@ -1,5 +1,5 @@
 :root {
-    --size: 500px;
+    --size: 600px;
   }
 
 .cv-preview {
@@ -7,7 +7,8 @@
   background-color: white;
   aspect-ratio: 1 / 1.41; /* A4 aspect ratio (width / height) */
   min-width: calc(1 * var(--size)); /* Set minimum width based on aspect ratio */
-  max-width: calc(1.25 * var(--size));
+  max-width: calc(1 * var(--size));
+  max-height: calc(1.41 * var(--size));
   margin: 0 auto;
   margin-bottom: 1rem;
   font-family: 'Times New Roman', Times, serif;

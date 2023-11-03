@@ -28,11 +28,16 @@
     gap: 1rem;
     margin: 0 auto;
     font-family: sans-serif;
+    margin-bottom: 1rem;
 }
 
 @media (max-width: 800px){
     .main-container{
         display: flex;
         flex-direction: column;
+    }
+
+    .container{
+        width: 80%;
     }
 }

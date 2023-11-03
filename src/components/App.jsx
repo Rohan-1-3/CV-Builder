@@ -9,6 +9,7 @@ import React, { useState } from 'react'
 import PersonalDetails from './PersonalDetails'
 import Preview from './Preview'
 import Skills from './Skills'
+import Education from './Education'
 
 const extraFeatures = [
     {
@@ -22,7 +23,7 @@ const extraFeatures = [
         id: uuid()
     },
     {
-        name :"Example Resume",
+        name :"Example",
         iconSrc: file,
         id: uuid()
     },
@@ -41,7 +42,9 @@ function App() {
         address : "",
         summary : ""
     });
+    const [activeCode, setActiveCode] = useState(0);
     const [skills, setSkills] = useState([]);
+    const [education, setEducation] = useState([]);
 
     const handlePersonalDetailsChange = (newDetails)=>{
         setPersonalDetails(newDetails);
@@ -49,6 +52,14 @@ function App() {
 
     const handleSkillsChange = (newSkill)=>{
         setSkills(newSkill);
+    }
+
+    const handleEducationChange = (newEducation)=>{
+        setEducation(newEducation);
+    }
+
+    const handleActiveCode = (newActiveCode)=>{
+        setActiveCode(newActiveCode)
     }
 
     return(
@@ -60,10 +71,16 @@ function App() {
                 <div className='container'>
                     <ExtraFeatures features = {extraFeatures}/>
                     <PersonalDetails details={personalDetails} onUpdate={handlePersonalDetailsChange}/>
-                    <Skills details={skills} onUpdate={handleSkillsChange}/>
+                    <div className='extra-details'>
+                        <Skills details={skills} onUpdate={handleSkillsChange}
+                                activeCode ={activeCode} handleActiveCode={handleActiveCode}/>
+                        <Education details={education} onUpdate={handleEducationChange}
+                                    activeCode ={activeCode} handleActiveCode={handleActiveCode}/>
+                    </div>
                 </div>
                 <Preview details={personalDetails}
-                        skillsList={skills}/>
+                        skillsList={skills}
+                        educationList = {education}/>
             </main>
         </React.Fragment>
     )

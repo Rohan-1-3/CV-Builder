@@ -111,8 +111,8 @@ function Education({details, onUpdate, activeCode, handleActiveCode}) {
                     <React.Fragment>
                         {education.map(edu => <EducationContainer key={edu.id}
                             handleChange={handleChange}
-                            edu={edu}
-                            education = {education}
+                            education={edu}
+                            educations = {education}
                         />)}
                         <div className="extra-detail button">
                             <button onClick={()=>setFormActive(true)}>Add Education</button>

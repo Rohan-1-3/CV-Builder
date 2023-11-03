@@ -72,10 +72,10 @@ function App() {
                     <ExtraFeatures features = {extraFeatures}/>
                     <PersonalDetails details={personalDetails} onUpdate={handlePersonalDetailsChange}/>
                     <div className='extra-details'>
+                        <Education details={education} onUpdate={handleEducationChange}
+                        activeCode ={activeCode} handleActiveCode={handleActiveCode}/>
                         <Skills details={skills} onUpdate={handleSkillsChange}
                                 activeCode ={activeCode} handleActiveCode={handleActiveCode}/>
-                        <Education details={education} onUpdate={handleEducationChange}
-                                    activeCode ={activeCode} handleActiveCode={handleActiveCode}/>
                     </div>
                 </div>
                 <Preview details={personalDetails}

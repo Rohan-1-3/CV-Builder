@@ -11,29 +11,6 @@ import Preview from './Preview'
 import Skills from './Skills'
 import Education from './Education'
 
-const extraFeatures = [
-    {
-        name :"Theme",
-        iconSrc: darkTheme,
-        id: uuid()
-    },
-    {
-        name :"Clear Resume",
-        iconSrc: trash,
-        id: uuid()
-    },
-    {
-        name :"Example",
-        iconSrc: file,
-        id: uuid()
-    },
-    {
-        name :"Download CV",
-        iconSrc: download,
-        id: uuid()
-    }
-]
-
 function App() {
     const [personalDetails, setPersonalDetails] = useState({
         fullName: "",
@@ -45,6 +22,41 @@ function App() {
     const [activeCode, setActiveCode] = useState(0);
     const [skills, setSkills] = useState([]);
     const [education, setEducation] = useState([]);
+
+    const clearData = ()=>{
+        setActiveCode(0);
+        setPersonalDetails({fullName:"",phone:"",email:"",address:"",summary:""});
+        setSkills([]);
+        setEducation([]);
+
+    }
+
+    const extraFeatures = [
+        {
+            name :"Theme",
+            iconSrc: darkTheme,
+            id: uuid(),
+            event : ""
+        },
+        {
+            name :"Clear Resume",
+            iconSrc: trash,
+            id: uuid(),
+            event : ""
+        },
+        {
+            name :"Sample",
+            iconSrc: file,
+            id: uuid(),
+            event : ""
+        },
+        {
+            name :"Download CV",
+            iconSrc: download,
+            id: uuid(),
+            event : ""
+        }
+    ]
 
     const handlePersonalDetailsChange = (newDetails)=>{
         setPersonalDetails(newDetails);

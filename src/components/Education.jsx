@@ -26,9 +26,7 @@ function Education({details, onUpdate, activeCode, handleActiveCode}) {
 
     const handleDegreeChange = (field, value) => {
         const updatedDegree = { ...degree }; // 'Degree' holds the state for the Degree details
-
         updatedDegree[field] = value;
-
         setDegree(updatedDegree); // 'setDegree' is the function to update the state for Degree
     };
 
@@ -83,7 +81,7 @@ function Education({details, onUpdate, activeCode, handleActiveCode}) {
                         label="Start Date"
                         value={degree.startDate}
                         onChange={(e) => handleDegreeChange('startDate', e.target.value)}
-                        type="date"
+                        type="month"
                         />
 
                         <InputField

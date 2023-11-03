@@ -3,22 +3,7 @@
 import React, { useEffect, useState } from "react";
 import "../cssFiles/Skills.css";
 import { v4 as uuid } from 'uuid'
-
-const InputField = ({ id, label, value, onChange }) => {
-    return (
-      <div className={`input-div ${id}`}>
-        <input
-          className={id}
-          id={id}
-          value={value}
-          onChange={onChange}
-          autoComplete="off"
-          placeholder=" "
-        />
-        <label htmlFor={id}>{label}</label>
-      </div>
-    );
-  };
+import InputField from "./InputField";
 
 export function SkillContainer({handleChange ,skill, skills}){
     const [skillEditName, setSkillEditName] = useState(skill.skillName);
@@ -71,7 +56,6 @@ export function SkillContainer({handleChange ,skill, skills}){
                                 setSkillEditName(skill.skillName)
                             }}>Back</button>
                         </div>
-
                     </div>
                 )
 

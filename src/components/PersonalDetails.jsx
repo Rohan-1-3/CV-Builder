@@ -3,22 +3,7 @@
 
 import { useEffect, useState } from "react";
 import "../cssFiles/PersonalDetails.css"
-
-const InputField = ({ id, label, value, onChange }) => {
-  return (
-    <div className={`input-div ${id}`}>
-      <input
-        className={id}
-        id={id}
-        value={value}
-        onChange={onChange}
-        autoComplete="off"
-        placeholder=" "
-      />
-      <label htmlFor={id}>{label}</label>
-    </div>
-  );
-};
+import InputField from "./InputField";
 
 function PersonalDetails({details, onUpdate}) {
     const [personalDetail, setPersonalDetail] = useState(details);

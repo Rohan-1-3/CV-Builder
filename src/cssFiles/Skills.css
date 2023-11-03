@@ -74,7 +74,7 @@ button:hover{
     background-color: rgb(235, 234, 252);
     border: none;
     padding: .5rem 2rem;
-    border-radius: .3rem;
+    border-radius: 2rem;
     font-weight: bold;
 }
 
@@ -92,8 +92,10 @@ button:hover{
 .form-buttons button{
     padding: .5rem 1rem;
     border: none;
-    border-radius: .3rem;
+    border-radius: 1rem;
     font-weight: bold;
+    color: white;
+
 }
 
 .confirm-button{
@@ -102,10 +104,6 @@ button:hover{
 
 .cancel-button{
     background-color: rgb(255, 0, 0);
-}
-
-.cancel-button, .confirm-button{
-    color: white;
 }
 
 .visible {

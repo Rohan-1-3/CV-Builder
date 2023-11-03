@@ -14,8 +14,12 @@ function Skills({details, onUpdate, activeCode, handleActiveCode}) {
     const skillActiveCode = 1;
 
     useEffect(()=>{
+        setSkills(details);
+    },[details])
+    
+    useEffect(()=>{
         onUpdate(skills);
-    },[onUpdate, skills])
+    },[skills])
 
     const handleChange = (updatedSkills)=>{
         setSkills(updatedSkills);

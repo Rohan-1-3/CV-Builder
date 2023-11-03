@@ -19,6 +19,10 @@ function Education({details, onUpdate, activeCode, handleActiveCode}) {
     });
 
     useEffect(()=>{
+        setEducation(details);
+    },[details])
+
+    useEffect(()=>{
         onUpdate(education);
     },[education])
 

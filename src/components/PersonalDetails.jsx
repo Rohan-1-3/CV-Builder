@@ -8,9 +8,15 @@ import InputField from "./InputField";
 function PersonalDetails({details, onUpdate}) {
     const [personalDetail, setPersonalDetail] = useState(details);
 
+    console.log(personalDetail)
+
+    useEffect(()=>{
+        setPersonalDetail(details)
+    },[details]);
+    
     useEffect(()=>{
         onUpdate(personalDetail)
-    }, [onUpdate, personalDetail]);
+    }, [personalDetail]);
 
     const handleInputChange = (field, value) => {
         setPersonalDetail({ ...personalDetail, [field]: value });

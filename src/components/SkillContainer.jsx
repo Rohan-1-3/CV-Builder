@@ -10,7 +10,12 @@ function SkillContainer({handleChange ,skill, skills}){
         if (updatedSkills !== null) {
           handleChange(updatedSkills);
         }
-      }, [updatedSkills]);
+    }, [updatedSkills]);
+
+    useEffect(()=>{
+        setUpdatedSkills(skills);
+        setSkillEditName(skill.skillName);
+    },[skills, skill])
 
 
     const handleDelete = ()=>{

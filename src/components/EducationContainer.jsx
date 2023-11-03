@@ -9,6 +9,11 @@ function EducationContainer({handleChange, education, educations}) {
     const [degree, setDegree] = useState(education);
 
     useEffect(()=>{
+        setUpdatedEducation(educations);
+        setDegree(education)
+    },[education, educations])
+
+    useEffect(()=>{
         if(updatedEducation !== null){
             handleChange(updatedEducation)
         }

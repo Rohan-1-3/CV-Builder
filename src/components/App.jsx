@@ -1,6 +1,5 @@
 import '../cssFiles/App.css'
 import ExtraFeatures from './ExtraFeatures'
-import { v4 as uuid } from 'uuid'
 import darkTheme from "../assets/dark-theme.svg"
 import trash from "../assets/trash.svg"
 import file from "../assets/file.svg"
@@ -28,35 +27,7 @@ function App() {
         setPersonalDetails({fullName:"",phone:"",email:"",address:"",summary:""});
         setSkills([]);
         setEducation([]);
-
     }
-
-    const extraFeatures = [
-        {
-            name :"Theme",
-            iconSrc: darkTheme,
-            id: uuid(),
-            event : ""
-        },
-        {
-            name :"Clear Resume",
-            iconSrc: trash,
-            id: uuid(),
-            event : ""
-        },
-        {
-            name :"Sample",
-            iconSrc: file,
-            id: uuid(),
-            event : ""
-        },
-        {
-            name :"Download CV",
-            iconSrc: download,
-            id: uuid(),
-            event : ""
-        }
-    ]
 
     const handlePersonalDetailsChange = (newDetails)=>{
         setPersonalDetails(newDetails);
@@ -81,7 +52,13 @@ function App() {
             </header>
             <main className='main-container'>
                 <div className='container'>
-                    <ExtraFeatures features = {extraFeatures}/>
+                    <div className='extra-features'>
+                        <ExtraFeatures name="Theme" icon = {darkTheme} handleClick={clearData} />
+                        <ExtraFeatures name="Sample" icon = {file} handleClick={clearData} />
+                        <ExtraFeatures name="Clear Resume" icon = {trash} handleClick={clearData} />
+                        <ExtraFeatures name="Download" icon = {download} handleClick={clearData} />
+                    </div>
+
                     <PersonalDetails details={personalDetails} onUpdate={handlePersonalDetailsChange}/>
                     <div className='extra-details'>
                         <Education details={education} onUpdate={handleEducationChange}

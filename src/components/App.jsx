@@ -78,7 +78,8 @@ function App() {
                 </div>
                 <Preview details={personalDetails}
                         skillsList={skills}
-                        educationList = {education}/>
+                        educationList = {education}
+                        workList = {workExperience}/>
             </main>
         </React.Fragment>
     )

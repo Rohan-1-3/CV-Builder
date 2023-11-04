@@ -106,7 +106,7 @@ function WorkExperience({details, onUpdate, activeCode, handleActiveCode}) {
                 />
 
                 <div className="input-div">
-                    <textarea value={newWorkExperience.description} className="summary" placeholder="Write Something About Yourself..."
+                    <textarea value={newWorkExperience.description} className="summary" placeholder="Write about your role in company"
                         onChange={e=> handleExperienceChange('description', e.target.value)}>
                     </textarea>
                 </div>

@@ -50,7 +50,7 @@
   font-weight: bold;
 }
 
-.professional-summary p, .education-list p{
+.professional-summary p, .education-list p, .work-list p{
   margin: .5rem 3rem;
   text-align: justify;
   font-size: 1.2rem;
@@ -68,7 +68,7 @@
   font-size: 1.2rem;
 }
 
-.school-name{
+.school-name, .company-name, .bold{
   font-weight: 550;
 }
 

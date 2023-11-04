@@ -89,7 +89,7 @@ function ExperienceContainer({work, workExperienceList, handleChange}) {
                 />
 
                 <div className="input-div">
-                    <textarea value={experience.description} className="summary" placeholder="Write Something About Yourself..."
+                    <textarea value={experience.description} className="summary" placeholder="Write about your role in company"
                         onChange={e=> handleExperienceChange('description', e.target.value)}>
                     </textarea>
                 </div>

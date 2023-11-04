@@ -13,6 +13,7 @@ max-height: calc(1.7625 * var(--size));
 margin: 0 auto;
 margin-bottom: 1rem;
 font-family: 'Times New Roman', Times, serif;
+color: black;
 }
 
 .cv-container{

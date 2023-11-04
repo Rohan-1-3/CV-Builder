@@ -10,6 +10,7 @@ import Preview from './Preview'
 import Skills from './Skills'
 import Education from './Education'
 import WorkExperience from './WorkExperience'
+import { experienceData, personalDetail, educationData, skillData } from './Data'
 
 function App() {
     const [personalDetails, setPersonalDetails] = useState({
@@ -23,6 +24,14 @@ function App() {
     const [skills, setSkills] = useState([]);
     const [education, setEducation] = useState([]);
     const [workExperience, setWorkExperience] = useState([]);
+
+    const sampleData = ()=>{
+        setActiveCode(0);
+        setPersonalDetails(personalDetail);
+        setSkills([...skillData]);
+        setEducation([...educationData]);
+        setWorkExperience([...experienceData])
+    }
 
     const clearData = ()=>{
         setActiveCode(0);
@@ -61,9 +70,9 @@ function App() {
                 <div className='container'>
                     <div className='extra-features'>
                         <ExtraFeatures name="Theme" icon = {darkTheme} handleClick={clearData} />
-                        <ExtraFeatures name="Sample" icon = {file} handleClick={clearData} />
+                        <ExtraFeatures name="Sample" icon = {file} handleClick={sampleData} />
                         <ExtraFeatures name="Clear Resume" icon = {trash} handleClick={clearData} />
-                        <ExtraFeatures name="Download" icon = {download} handleClick={clearData} />
+                        <ExtraFeatures name="Download" icon = {download} handleClick={downloadData} />
                     </div>
 
                     <PersonalDetails details={personalDetails} onUpdate={handlePersonalDetailsChange}/>

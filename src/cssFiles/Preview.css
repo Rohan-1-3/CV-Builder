@@ -1,5 +1,85 @@
 :root {
-    --size: 600px;
+  --size: 600px;
+}
+
+.cv-preview {
+width: 70%;
+background-color: white;
+aspect-ratio: 1 / 1.41; /* A4 aspect ratio (width / height) */
+min-width: calc(1 * var(--size)); /* Set minimum width based on aspect ratio */
+min-height: calc((1.41 * var(--size)));
+max-width: calc(1.25 * var(--size));
+max-height: calc(1.7625 * var(--size));
+margin: 0 auto;
+margin-bottom: 1rem;
+font-family: 'Times New Roman', Times, serif;
+}
+
+.cv-container{
+width: 90%;
+margin: auto auto;
+display: flex;
+flex-direction: column;
+gap: 1rem;
+}
+
+.cv-preview-personal{
+padding: 1rem;
+border-bottom: 1px dotted black;
+width: 90%;
+margin: auto;
+}
+
+.cv-preview-personal h1{
+font-size: 1.8rem;
+font-weight: bold;
+max-width: fit-content;
+margin: 1rem auto;
+}
+
+.cv-preview-personal p{
+font-size: 1rem;
+margin: .4rem auto;
+font-weight: 550;
+max-width: fit-content;
+max-height: fit-content;
+}
+
+.cv-container h3{
+font-size: 1.4rem;
+font-weight: bold;
+}
+
+.professional-summary p, .education-list p, .work-list p{
+margin: .5rem 3rem;
+text-align: justify;
+font-size: 1.2rem;
+}
+
+.skills-list ul{
+height: 4rem;
+display: flex;
+flex-direction: column;
+flex-wrap: wrap;
+margin: .5rem 3rem;
+}
+
+.skills-list li{
+font-size: 1.2rem;
+}
+
+.school-name, .company-name, .bold{
+font-weight: 550;
+}
+
+.hidden{
+position: absolute;
+display: none;
+}
+
+@media print {
+  :root {
+    --size: 1000px;
   }
 
 .cv-preview {
@@ -75,4 +155,5 @@
 .hidden{
   position: absolute;
   display: none;
+}
 }

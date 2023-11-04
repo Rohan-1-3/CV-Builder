@@ -69,6 +69,23 @@ const skillData = [
         skillName: "Git",
         active: false,
         visibility: true
+    },{
+        id: uuid(),
+        skillName: "Node.js",
+        active: false,
+        visibility: true
+    },
+    {
+        id: uuid(),
+        skillName: "SQL",
+        active: false,
+        visibility: true
+    },
+    {
+        id: uuid(),
+        skillName: "Git",
+        active: false,
+        visibility: true
     },
 ];
 

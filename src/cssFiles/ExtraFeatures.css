@@ -1,19 +1,7 @@
-:root{
-	--primary-color : rgba(227, 226, 251, 0.724);
-	--secondary-color : rgb(255, 255, 255);
-	--text-color : black;
-}
-
-.dark-mode{
-	--primary-color : rgba(79, 79, 90, 0.667);
-	--secondary-color : black;
-	--text-color : rgb(255, 255, 255);
-}
-
 .extra-features, .personal-details{
     box-sizing: border-box;
     width: 100%;
-    background-color: var(--secondary-color);
+    background-color: white;
     display: flex;
     flex-direction: column;
     gap: 1rem;
@@ -23,7 +11,7 @@
 
 .feature-card{
     display: flex;
-    background-color: var(--primary-color);
+    background-color: rgba(227, 226, 251, 0.724);
     padding: .5rem;
     justify-content: center;
     gap: 1rem;

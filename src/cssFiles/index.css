@@ -1,3 +1,14 @@
+:root{
+	--primary-color : rgb(227, 226, 251);
+	--secondary-color : rgb(255, 255, 255);
+	--text-color : black;
+}
+
+.dark-mode{
+	--primary-color : rgb(79, 79, 90);
+	--secondary-color : black;
+	--text-color : rgb(255, 255, 255);
+}
 
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -45,7 +56,6 @@ table {
 
 html{
 	font-size: 1rem;
-	background-color: rgb(227, 226, 251);
 }
 
 body{
@@ -53,6 +63,8 @@ body{
 	height: 100vh;
 	overflow-x: hidden;
 	padding: 1rem;
+	background-color: var(--primary-color);
+	color: var(--text-color);
 }
 
 #root{

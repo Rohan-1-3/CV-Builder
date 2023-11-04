@@ -1,3 +1,15 @@
+:root{
+	--primary-color : rgba(227, 226, 251, 0.724);
+	--secondary-color : rgb(255, 255, 255);
+	--text-color : black;
+}
+
+.dark-mode{
+	--primary-color : rgba(79, 79, 90, 0.667);
+	--secondary-color : black;
+	--text-color : rgb(255, 255, 255);
+}
+
 .extra-details{
     display: flex;
     flex-direction: column;
@@ -10,7 +22,7 @@
     display: flex;
     flex-direction: column;
     gap: .2rem;
-    background-color: white;
+    background-color: var(--secondary-color);
     padding: 1rem 2rem;
 }
 
@@ -49,7 +61,7 @@
     display: flex;
     /* justify-content: space-between; */
     padding: 1rem ;
-    background-color: rgb(235, 234, 252);
+    background-color: var(--primary-color);
     border-radius: 1rem;
 }
 
@@ -77,20 +89,22 @@ button:hover{
 }
 
 .extra-detail.button{
-    background-color: white;
+    background-color: var(--secondary-color);
     justify-content: center;
     padding: .7rem;
     max-width: fit-content;
     margin: auto;
+
 }
 
 .extra-detail.button button{
-    background-color: rgb(235, 234, 252);
+    background-color: var(--primary-color);
     border: none;
     padding: .5rem 2rem;
     border-radius: 2rem;
     font-weight: bold;
     font-size: 1rem;
+    color: var(--text-color);
 }
 
 .skill-form,.edit-form, .education-form, .experience-form{
@@ -109,8 +123,6 @@ button:hover{
     border: none;
     border-radius: 1rem;
     font-weight: bold;
-    color: white;
-
 }
 
 .confirm-button{

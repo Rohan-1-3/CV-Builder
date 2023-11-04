@@ -1,4 +1,12 @@
 import { v4 as uuid } from "uuid";
+import darkTheme from "../assets/dark-theme.svg"
+import trash from "../assets/trash.svg"
+import file from "../assets/file.svg"
+import download from "../assets/download.svg"
+import darkThemeWhite from "../assets/dark-theme-white.svg"
+import trashWhite from "../assets/trash-white.svg"
+import fileWhite from "../assets/file-white.svg"
+import downloadWhite from "../assets/download-white.svg"
 
 // Sample data for Personal Details
 const personalDetail = {
@@ -115,4 +123,19 @@ const experienceData = [
     }
 ];
 
-export {experienceData, personalDetail, educationData, skillData}
+const icons = {
+    light: {
+      darkTheme: darkThemeWhite,
+      trash: trashWhite,
+      file: fileWhite,
+      download: downloadWhite
+    },
+    dark: {
+      darkTheme: darkTheme,
+      trash: trash,
+      file: file,
+      download: download
+    }
+  }
+
+export {experienceData, personalDetail, educationData, skillData, icons}

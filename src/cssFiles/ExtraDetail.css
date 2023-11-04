@@ -80,6 +80,8 @@ button:hover{
     background-color: white;
     justify-content: center;
     padding: .7rem;
+    max-width: fit-content;
+    margin: auto;
 }
 
 .extra-detail.button button{
@@ -88,6 +90,7 @@ button:hover{
     padding: .5rem 2rem;
     border-radius: 2rem;
     font-weight: bold;
+    font-size: 1rem;
 }
 
 .skill-form,.edit-form, .education-form, .experience-form{

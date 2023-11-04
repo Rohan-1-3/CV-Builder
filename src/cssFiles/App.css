@@ -9,14 +9,38 @@
 }
 
 .header{
-    width: 100vw;
+    width: 90vw;
     padding: 1rem 0;
+    display: flex;
+    margin: auto ;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.github{
+    align-items: center;
+}
+
+.header svg{
+    width: 3rem;
 }
 
 .title{
     font-size: 2rem;
     max-width: fit-content;
-    margin: auto auto;
+    font-weight: bold;
+}
+
+.header a{
+    display: flex;
+    gap: 1rem;
+}
+.github p{
+    font-size: 1.5rem;
+}
+
+a{
+    text-decoration: none;
 }
 
 .container{
@@ -32,9 +56,15 @@
 }
 
 @media (max-width: 800px){
+    :root{
+        --size: 400px;
+    }
+
     .main-container{
         display: flex;
         flex-direction: column;
+        gap: 2rem;
+        min-width: 320px;
     }
 
     .container{

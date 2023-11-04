@@ -1,5 +1,5 @@
 :root {
-  --size: 800px;
+  --size: 50rem;
 }
 
 .cv-preview {
@@ -75,4 +75,32 @@ font-weight: 550;
 .hidden{
 position: absolute;
 display: none;
+}
+
+@media (max-width: 800px){
+  :root{
+    --size : 40rem;
+  }
+
+  .cv-preview {
+    aspect-ratio: 1 / 1.41; /* A4 aspect ratio (width / height) */
+    min-width: calc(1 * var(--size)); /* Set minimum width based on aspect ratio */
+    min-height: calc((1.41 * var(--size)));
+    max-width: calc(1.25 * var(--size));
+    max-height: calc(1.7625 * var(--size));
+    }
+}
+
+@media (max-width: 600px){
+  :root{
+    --size : 50rem;
+  }
+
+  .cv-preview {
+    aspect-ratio: 1 / 1.41; /* A4 aspect ratio (width / height) */
+    min-width: calc(1 * var(--size)); /* Set minimum width based on aspect ratio */
+    min-height: calc((1.41 * var(--size)));
+    max-width: calc(1.25 * var(--size));
+    max-height: calc(1.7625 * var(--size));
+    }
 }

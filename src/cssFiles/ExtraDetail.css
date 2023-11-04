@@ -45,7 +45,7 @@
     /* flex-wrap: wrap; */
 }
 
-.skill, .education{
+.skill, .education, .experience{
     display: flex;
     /* justify-content: space-between; */
     padding: 1rem ;
@@ -53,7 +53,7 @@
     border-radius: 1rem;
 }
 
-.skill p, .education p{
+.skill p, .education p, .experience p{
     flex: 1;
     cursor: pointer;
 }
@@ -90,7 +90,7 @@ button:hover{
     font-weight: bold;
 }
 
-.skill-form,.edit-form, .education-form{
+.skill-form,.edit-form, .education-form, .experience-form{
     display: flex;
     flex-direction: column;
     gap: 1rem;
@@ -116,6 +116,11 @@ button:hover{
 
 .cancel-button{
     background-color: rgb(255, 0, 0);
+}
+
+.edit-form{
+    width: 80%;
+    margin: auto auto;
 }
 
 .visible {

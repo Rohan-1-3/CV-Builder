@@ -37,7 +37,7 @@ function EducationContainer({handleChange, education, educations}) {
 
     const handleEdit = ()=>{
         setUpdatedEducation(educations.map(educat =>{
-            return (educat.id === degree.id ? {...educat, active : !education.active} : {...educat})
+            return (educat.id === degree.id ? {...educat, active : !education.active} : {...educat, active:false})
         }))
     }
 
@@ -51,7 +51,7 @@ function EducationContainer({handleChange, education, educations}) {
         <React.Fragment>
             {
                 education.active ? (
-                    <div className='education-form'>
+                    <div className='education-form edit-form'>
                         <InputField
                         id="name"
                         label="Degree"

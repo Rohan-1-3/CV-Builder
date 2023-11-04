@@ -8,12 +8,10 @@ import InputField from "./InputField";
 function PersonalDetails({details, onUpdate}) {
     const [personalDetail, setPersonalDetail] = useState(details);
 
-    console.log(personalDetail)
-
     useEffect(()=>{
         setPersonalDetail(details)
     },[details]);
-    
+
     useEffect(()=>{
         onUpdate(personalDetail)
     }, [personalDetail]);
@@ -54,7 +52,7 @@ function PersonalDetails({details, onUpdate}) {
             />
 
             <div className="input-div summary">
-              <textarea className="summary" placeholder="Write Something About Yourself..."
+              <textarea value={personalDetail.summary} className="summary" placeholder="Write Something About Yourself..."
                 onChange={e=> handleInputChange('summary', e.target.value)}>
               </textarea>
             </div>

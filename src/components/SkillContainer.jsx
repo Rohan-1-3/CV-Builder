@@ -30,7 +30,7 @@ function SkillContainer({handleChange ,skill, skills}){
 
     const handleEdit = ()=>{
         setUpdatedSkills(skills.map(ski => {
-            return (ski.id === skill.id) ? { ...ski, active : !ski.active } : { ...ski };
+            return (ski.id === skill.id) ? { ...ski, active : !ski.active } : { ...ski, active: false };
         }))
     }
 

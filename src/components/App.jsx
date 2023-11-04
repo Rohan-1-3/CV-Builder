@@ -9,6 +9,7 @@ import PersonalDetails from './PersonalDetails'
 import Preview from './Preview'
 import Skills from './Skills'
 import Education from './Education'
+import WorkExperience from './WorkExperience'
 
 function App() {
     const [personalDetails, setPersonalDetails] = useState({
@@ -21,12 +22,14 @@ function App() {
     const [activeCode, setActiveCode] = useState(0);
     const [skills, setSkills] = useState([]);
     const [education, setEducation] = useState([]);
+    const [workExperience, setWorkExperience] = useState([]);
 
     const clearData = ()=>{
         setActiveCode(0);
         setPersonalDetails({fullName:"",phone:"",email:"",address:"",summary:""});
         setSkills([]);
         setEducation([]);
+        setWorkExperience([]);
     }
 
     const handlePersonalDetailsChange = (newDetails)=>{
@@ -39,6 +42,10 @@ function App() {
 
     const handleEducationChange = (newEducation)=>{
         setEducation(newEducation);
+    }
+
+    const handleWorkExperienceChange = (newWork)=>{
+        setWorkExperience(newWork)
     }
 
     const handleActiveCode = (newActiveCode)=>{
@@ -61,6 +68,8 @@ function App() {
 
                     <PersonalDetails details={personalDetails} onUpdate={handlePersonalDetailsChange}/>
                     <div className='extra-details'>
+                        <WorkExperience details={workExperience} onUpdate={handleWorkExperienceChange}
+                            activeCode={activeCode} handleActiveCode={handleActiveCode}/>
                         <Education details={education} onUpdate={handleEducationChange}
                         activeCode ={activeCode} handleActiveCode={handleActiveCode}/>
                         <Skills details={skills} onUpdate={handleSkillsChange}

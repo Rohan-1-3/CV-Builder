@@ -69,14 +69,14 @@ function Education({details, onUpdate, activeCode, handleActiveCode}) {
                         <InputField
                         id="name"
                         label="Degree"
-                        value={education.institution}
+                        value={degree.name}
                         onChange={(e) => handleDegreeChange('name', e.target.value)}
                         />
 
                         <InputField
                         id="institution"
                         label="Institution"
-                        value={education.institution}
+                        value={degree.institution}
                         onChange={(e) => handleDegreeChange('institution', e.target.value)}
                         />
 

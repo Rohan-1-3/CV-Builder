@@ -72,7 +72,7 @@ function App() {
                         <ExtraFeatures name="Theme" icon = {darkTheme} handleClick={clearData} />
                         <ExtraFeatures name="Sample" icon = {file} handleClick={sampleData} />
                         <ExtraFeatures name="Clear Resume" icon = {trash} handleClick={clearData} />
-                        <ExtraFeatures name="Download" icon = {download} handleClick={downloadData} />
+                        <ExtraFeatures name="Download" icon = {download} handleClick={sampleData} />
                     </div>
 
                     <PersonalDetails details={personalDetails} onUpdate={handlePersonalDetailsChange}/>

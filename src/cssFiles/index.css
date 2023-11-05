@@ -73,7 +73,7 @@ body{
 	gap: 2rem;
 }
 
-@media (max-width: 900px){
+@media (max-width: 1000px){
     html{
         font-size: .75rem;
     }

@@ -105,3 +105,17 @@ display: none;
     max-height: calc(1.7625 * var(--size));
     }
 }
+
+@media (max-width: 450px){
+  :root{
+    --size : 40rem;
+  }
+
+  .cv-preview {
+    aspect-ratio: 1 / 1.41; /* A4 aspect ratio (width / height) */
+    min-width: calc(1 * var(--size)); /* Set minimum width based on aspect ratio */
+    min-height: calc((1.41 * var(--size)));
+    max-width: calc(1.25 * var(--size));
+    max-height: calc(1.7625 * var(--size));
+    }
+}
